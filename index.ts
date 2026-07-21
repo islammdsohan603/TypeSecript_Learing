@@ -1,23 +1,30 @@
-interface AppConfig {
-  appName: string;
-  version: string;
-  status: string;
-  port: number;
-  features: {
-    registroion: boolean;
-    darKmode: boolean;
-  };
-}
-
-const data: AppConfig = {
-  appName: "web servei",
-  version: "movow",
-  status: "isActive",
-  port: 5000,
-  features: {
-    registroion: true,
-    darKmode: false,
-  },
+type Player = {
+  name: string;
+  posstion: string;
+  jersey: number;
 };
 
-console.log(data);
+const players: Player[] = [
+  {
+    name: "naymar",
+    posstion: "stiker",
+    jersey: 10,
+  },
+  {
+    name: "naymar",
+    posstion: "stiker",
+    jersey: 10,
+  },
+  {
+    name: "naymar",
+    posstion: "lw",
+    jersey: 7,
+  },
+  {
+    name: "naymar",
+    posstion: "rw",
+    jersey: 11,
+  },
+];
+
+console.log(players);
