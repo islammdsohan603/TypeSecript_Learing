@@ -1,7 +1,16 @@
-const countries: string[] = ["Bangladesh", "Pakistan", "Napal"];
+type User = {
+  id: number;
+  name: string;
+};
 
-console.log(countries.length);
+const person: User = {
+  id: 2023,
+  name: "sohan",
+};
 
-for (let i = 0; i < countries.length; i++) {
-  console.log(countries[i]);
-}
+const persorn1: User = {
+  id: 52,
+  name: "sohanel",
+};
+
+console.log(persorn1);
