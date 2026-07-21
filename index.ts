@@ -1,3 +1,7 @@
-const n: number = 10;
+const countries: string[] = ["Bangladesh", "Pakistan", "Napal"];
 
-console.log(n);
+console.log(countries.length);
+
+for (let i = 0; i < countries.length; i++) {
+  console.log(countries[i]);
+}
