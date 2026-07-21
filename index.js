@@ -1,9 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const user = {
-    id: 12,
-    name: "sohan",
+const data = {
+    appName: "web servei",
+    version: "movow",
+    status: "isActive",
+    port: 5000,
+    features: {
+        registroion: true,
+        darKmode: false,
+    },
 };
-user.id = 5;
-console.log(user.id);
+console.log(data);
 //# sourceMappingURL=index.js.map

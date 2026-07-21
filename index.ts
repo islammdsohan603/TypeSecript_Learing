@@ -1,16 +1,23 @@
-type User = {
-  id: number;
-  name: string;
+interface AppConfig {
+  appName: string;
+  version: string;
+  status: string;
+  port: number;
+  features: {
+    registroion: boolean;
+    darKmode: boolean;
+  };
+}
+
+const data: AppConfig = {
+  appName: "web servei",
+  version: "movow",
+  status: "isActive",
+  port: 5000,
+  features: {
+    registroion: true,
+    darKmode: false,
+  },
 };
 
-const person: User = {
-  id: 2023,
-  name: "sohan",
-};
-
-const persorn1: User = {
-  id: 52,
-  name: "sohanel",
-};
-
-console.log(persorn1);
+console.log(data);
