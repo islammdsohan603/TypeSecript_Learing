@@ -1,15 +1,15 @@
-// Type Alies
+// interface
 
-type OrderSummary = {
-  qunatity: number;
+interface OrderSummery {
+  quantity: number;
   totalPrice: number;
-};
+}
 
-function calculaterTotal(qunatity: number, price: number): OrderSummary {
+function calculaterTotal(quantity: number, price: number): OrderSummery {
   return {
-    qunatity,
-    totalPrice: qunatity * price,
+    quantity,
+    totalPrice: price * quantity,
   };
 }
 
-console.log(calculaterTotal(2, 981));
+console.log(calculaterTotal(8, 451));

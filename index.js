@@ -1,10 +1,11 @@
 "use strict";
+// interface
 Object.defineProperty(exports, "__esModule", { value: true });
-function calculaterTotal(qunatity, price) {
+function calculaterTotal(quantity, price) {
     return {
-        qunatity,
-        totalPrice: qunatity * price,
+        quantity,
+        totalPrice: price * quantity,
     };
 }
-console.log(calculaterTotal(2, 981));
+console.log(calculaterTotal(8, 451));
 //# sourceMappingURL=index.js.map
