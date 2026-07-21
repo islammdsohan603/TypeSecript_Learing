@@ -1,15 +1,18 @@
-// interface
-
-interface OrderSummery {
+type Product = {
+  name: string;
+  price: number;
   quantity: number;
   totalPrice: number;
-}
+};
 
-function calculaterTotal(quantity: number, price: number): OrderSummery {
+function createProduct(name: string, price: number, quantity: number): Product {
   return {
+    name,
+    price,
     quantity,
     totalPrice: price * quantity,
   };
 }
 
-console.log(calculaterTotal(8, 451));
+console.log(createProduct("Laptop", 50000, 2));
+console.log(createProduct("Mobaile", 540, 12));
