@@ -1,26 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const players = [
-    {
-        name: "naymar",
-        posstion: "stiker",
-        jersey: 10,
-    },
-    {
-        name: "naymar",
-        posstion: "stiker",
-        jersey: 10,
-    },
-    {
-        name: "naymar",
-        posstion: "lw",
-        jersey: 7,
-    },
-    {
-        name: "naymar",
-        posstion: "rw",
-        jersey: 11,
-    },
-];
-console.log(players);
+function calculaterTotal(qunatity, price) {
+    return {
+        qunatity,
+        totalPrice: qunatity * price,
+    };
+}
+console.log(calculaterTotal(2, 981));
 //# sourceMappingURL=index.js.map

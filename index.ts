@@ -1,30 +1,15 @@
-type Player = {
-  name: string;
-  posstion: string;
-  jersey: number;
+// Type Alies
+
+type OrderSummary = {
+  qunatity: number;
+  totalPrice: number;
 };
 
-const players: Player[] = [
-  {
-    name: "naymar",
-    posstion: "stiker",
-    jersey: 10,
-  },
-  {
-    name: "naymar",
-    posstion: "stiker",
-    jersey: 10,
-  },
-  {
-    name: "naymar",
-    posstion: "lw",
-    jersey: 7,
-  },
-  {
-    name: "naymar",
-    posstion: "rw",
-    jersey: 11,
-  },
-];
+function calculaterTotal(qunatity: number, price: number): OrderSummary {
+  return {
+    qunatity,
+    totalPrice: qunatity * price,
+  };
+}
 
-console.log(players);
+console.log(calculaterTotal(2, 981));
