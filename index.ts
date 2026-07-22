@@ -1,28 +1,22 @@
-enum TColors {
-  Red = "red",
-  Green = "green",
-  Yellow = "yellow",
+type User = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+const users: User[] = [];
+
+let lastId: number = 0;
+function addUser(name: string, email: string): User {
+  const user: User = {
+    id: ++lastId,
+    name,
+    email,
+  };
+
+  users.push(user);
+  return user;
 }
 
-type TeeShirt = {
-  size: number;
-  color: TColors;
-};
-
-const t1: TeeShirt = {
-  size: 42,
-  color: TColors.Red,
-};
-
-const t2: TeeShirt = {
-  size: 39,
-  color: TColors.Yellow,
-};
-
-const t3: TeeShirt = {
-  size: 40,
-  color: TColors.Green,
-};
-
-console.log(t1);
-console.log(t3);
+console.log(addUser("Alice", "sohan@gmail.com"));
+console.log(addUser("Naymar", "sohan123@gmail.com"));
