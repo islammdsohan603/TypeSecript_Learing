@@ -1,18 +1,28 @@
-type Product = {
-  name: string;
-  price: number;
-  quantity: number;
-  totalPrice: number;
-};
-
-function createProduct(name: string, price: number, quantity: number): Product {
-  return {
-    name,
-    price,
-    quantity,
-    totalPrice: price * quantity,
-  };
+enum TColors {
+  Red = "red",
+  Green = "green",
+  Yellow = "yellow",
 }
 
-console.log(createProduct("Laptop", 50000, 2));
-console.log(createProduct("Mobaile", 540, 12));
+type TeeShirt = {
+  size: number;
+  color: TColors;
+};
+
+const t1: TeeShirt = {
+  size: 42,
+  color: TColors.Red,
+};
+
+const t2: TeeShirt = {
+  size: 39,
+  color: TColors.Yellow,
+};
+
+const t3: TeeShirt = {
+  size: 40,
+  color: TColors.Green,
+};
+
+console.log(t1);
+console.log(t3);
