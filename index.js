@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const studentName = 'sohan';
-const studentLastName = 'islam';
-console.log(studentName + studentLastName);
+const user = {
+    id: 21,
+    name: 'sohan',
+    age: 20,
+};
+console.log(user);
 //# sourceMappingURL=index.js.map

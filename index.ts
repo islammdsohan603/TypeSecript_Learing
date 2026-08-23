@@ -1,4 +1,13 @@
-const studentName: string = 'sohan';
-const studentLastName: string = 'islam';
+// objects
 
-console.log(studentName + studentLastName);
+const user: {
+  age: number;
+  id: number;
+  name: string;
+} = {
+  id: 21,
+  name: 'sohan',
+  age: 20,
+};
+
+console.log(user);
