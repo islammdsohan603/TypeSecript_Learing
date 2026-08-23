@@ -1,5 +1,4 @@
-const add = (num1: number, num2: number) => {
-  return num1 + num2;
-};
+const studentName: string = 'sohan';
+const studentLastName: string = 'islam';
 
-console.log(add(2, 5));
+console.log(studentName + studentLastName);
