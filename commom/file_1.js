@@ -1,3 +1,5 @@
-const a = 154;
+setTimeout(() => {
+  console.log("Test");
+}, 2000);
 
-export default a;
+console.log("sohan");
