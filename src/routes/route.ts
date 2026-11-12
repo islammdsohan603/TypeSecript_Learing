@@ -1,4 +1,4 @@
-import type { IncomingMessage, ServerResponse } from "http";
+import type { IncomingMessage, ServerResponse } from "node:http";
 import productController from "../controllers/product.controller";
 
 const routeHandler = (req: IncomingMessage, res: ServerResponse) => {
@@ -10,11 +10,6 @@ const routeHandler = (req: IncomingMessage, res: ServerResponse) => {
 
   // Root Route
   if (url === "/" && method === "GET") {
-    productController(req, res);
-  }
-
-  // Product Route
-  else if (url?.startsWith("/product") && method === "GET") {
     res.writeHead(200, {
       "Content-Type": "application/json",
     });
@@ -22,13 +17,18 @@ const routeHandler = (req: IncomingMessage, res: ServerResponse) => {
     res.end(
       JSON.stringify({
         success: true,
-        message: "This is product route!",
+        message: "Welcome to Node.js Server!",
       }),
     );
   }
 
+  // Product Route
+  else if (url === "/product" && method === "GET") {
+    productController(req, res);
+  }
+
   // Method Not Allowed
-  else if (url === "/" && method !== "GET") {
+  else if (url === "/" || url === "/product") {
     res.writeHead(405, {
       "Content-Type": "application/json",
     });
