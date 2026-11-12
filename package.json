@@ -1,0 +1,31 @@
+{
+  "name": "next_level",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev":"tsx watch ./src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/islammdsohan603/TypeSecript_Learing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/islammdsohan603/TypeSecript_Learing/issues"
+  },
+  "homepage": "https://github.com/islammdsohan603/TypeSecript_Learing#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "express": "^5.3.0",
+    "node": "^26.13.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "tsx": "^4.23.15"
+  }
+}
