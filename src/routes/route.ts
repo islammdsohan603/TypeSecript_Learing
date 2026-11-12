@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import productController from "../controllers/product.controller";
 
-const routeHandler = (req: IncomingMessage, res: ServerResponse) => {
+const routeHandler = (req: IncomingMessage, res: ServerResponse): void => {
   const url = req.url;
   const method = req.method;
 
@@ -24,7 +24,7 @@ const routeHandler = (req: IncomingMessage, res: ServerResponse) => {
 
   // Product Route
   else if (url === "/product" && method === "GET") {
-    productController(req, res);
+    void productController(req, res);
   }
 
   // Method Not Allowed
@@ -50,7 +50,7 @@ const routeHandler = (req: IncomingMessage, res: ServerResponse) => {
     res.end(
       JSON.stringify({
         success: false,
-        message: "This route is not found!",
+        message: "Route Not Found!",
       }),
     );
   }
