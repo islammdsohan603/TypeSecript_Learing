@@ -1,6 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { productService } from "../service/product.service";
- 
 
 const productController = async (
   req: IncomingMessage,

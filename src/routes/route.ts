@@ -24,7 +24,7 @@ const routeHandler = (req: IncomingMessage, res: ServerResponse): void => {
 
   // Product Route
   else if (url === "/product" && method === "GET") {
-    void productController(req, res);
+    productController(req, res);
   }
 
   // Method Not Allowed
