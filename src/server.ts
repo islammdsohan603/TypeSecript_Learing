@@ -1,18 +1,18 @@
-import {
-  createServer,
-  IncomingMessage,
-  Server,
-  ServerResponse,
-} from "node:http";
-import routeHandler from "./routes/route";
+import { createServer } from "http";
 
-const server: Server = createServer(
-  (req: IncomingMessage, res: ServerResponse) => {
-    routeHandler(req, res);
-  },
-);
+const server = createServer((req, res) => {
+  res.writeHead(200, {
+    "Content-Type": "application/json",
+  });
 
-// Start Server
+  res.end(
+    JSON.stringify({
+      success: true,
+      message: "Server is working",
+    }),
+  );
+});
+
 server.listen(5000, () => {
-  console.log("Server is running on http://localhost:5000");
+  console.log("Server running on port 5000");
 });
