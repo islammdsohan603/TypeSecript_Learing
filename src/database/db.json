@@ -1,12 +1,18 @@
- {
-   "success": true,
-   "message": "Student created successfully",
-   "data": {
-     "id": 1,
-     "name": "Sohan Islam",
-     "email": "sohan@gmail.com",
-     "age": 24,
-     "department": "Computer Science",
-     "createdAt": "..."
-   }
- }
+[
+  {
+    "id": 1,
+    "name": "Sohan Islam",
+    "email": "sohan@gmail.com",
+    "age": 24,
+    "department": "Computer Science",
+    "createdAt": "2026-11-14T04:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "name": "Rahim",
+    "email": "rahim@gmail.com",
+    "age": 23,
+    "department": "Software Engineering",
+    "createdAt": "2026-11-14T04:10:00.000Z"
+  }
+]
