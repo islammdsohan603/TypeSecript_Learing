@@ -2,8 +2,9 @@ import type { IncomingMessage, ServerResponse } from "http";
 import { productService } from "./../service/product.service";
 
 import type { Student } from "../types/student.types";
+import { bodyParser } from "../utils/parsebody";
 
-export const productController = (
+export const productController = async (
   req: IncomingMessage,
   res: ServerResponse,
 ) => {
@@ -28,7 +29,9 @@ export const productController = (
         data: products,
       }),
     );
-  } else if (method === "GET" && id !== null) {
+  }
+  // single users
+  else if (method === "GET" && id !== null) {
     const users = productService();
     const user = users.find((p: Student) => p.id === id);
 
@@ -38,6 +41,17 @@ export const productController = (
         success: true,
         message: "Single user found successfully",
         data: user,
+      }),
+    );
+  } else if (method === "POST" && url === "/users") {
+    const body = await bodyParser(req);
+    console.log(body);
+
+    res.writeHead(201, { "Content-Type": "application/json" });
+    res.end(
+      JSON.stringify({
+        success: true,
+        message: "Single user post successfully!",
       }),
     );
   }
