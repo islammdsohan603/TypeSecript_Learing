@@ -8,7 +8,7 @@ export const routerHandler = (req: IncomingMessage, res: ServerResponse) => {
   if (url === "/" && method === "GET") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ success: true, message: "This is Root Route" }));
-  } else if (url?.startsWith("/product")) {
+  } else if (url?.startsWith("/users")) {
     productController(req, res);
   } else {
     res.writeHead(404, { "Content-Type": "application/json" });
