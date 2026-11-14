@@ -9,27 +9,14 @@ export const productController = (
   const method = req.method;
 
   if (url === "/users" && method === "GET") {
-    const proudcts = [
-      {
-        id: 1,
-        name: "PC",
-        price: 200,
-      },
-      {
-        id: 2,
-        name: "PC",
-        price: 200,
-      },
-    ];
-
-    productService();
+    const products = productService();
 
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(
       JSON.stringify({
         success: true,
         message: "Products Show in Browers ",
-        data: proudcts,
+        data: products,
       }),
     );
   }
